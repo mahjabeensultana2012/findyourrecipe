@@ -1,21 +1,27 @@
-import React, {Component} from 'react';
-import {Form, FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap'
+import React, { Component } from 'react';
+import {
+  Form,
+  FormGroup,
+  FormControl,
+  FormLabel,
+  Button,
+} from 'react-bootstrap';
 
-class SearchRecipes extend Component{
-  render (){
-    return(
+class SearchRecipes extends Component {
+  render() {
+    return (
       <Form>
         <FormGroup>
-          <ControlLabel>Ingredients</ControlLabel>
-          <FormControl type= "text" placeholder="mashroom" />>
-        </FormGroup>
-        {' '}
+          <FormLabel>Ingredients</FormLabel>
+          <FormControl type="text" placeholder="mashroom" />>
+        </FormGroup>{' '}
         <FormGroup>
-        <ControlLabel>Dish</ControlLabel>
-        <FormControl type= "text" placeholder="pizza" />
+          <FormLabel>Dish</FormLabel>
+          <FormControl type="text" placeholder="pizza" />
         </FormGroup>
+        <Button>Submit</Button>
       </Form>
-    )
+    );
   }
 }
 
