@@ -10,15 +10,17 @@ import {
 class SearchRecipes extends Component {
   render() {
     return (
-      <Form>
+      <Form inline>
         <FormGroup>
-          <FormLabel>Ingredients</FormLabel>
-          <FormControl type="text" placeholder="mashroom" />>
-        </FormGroup>{' '}
+          <FormLabel>Ingredients</FormLabel>{' '}
+          <FormControl type="text" placeholder="mashroom" />
+        </FormGroup>
+        {'  '}
         <FormGroup>
-          <FormLabel>Dish</FormLabel>
+          <FormLabel>Dish</FormLabel>{' '}
           <FormControl type="text" placeholder="pizza" />
         </FormGroup>
+        {'  '}
         <Button>Submit</Button>
       </Form>
     );
