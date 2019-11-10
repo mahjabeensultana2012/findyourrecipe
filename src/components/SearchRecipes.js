@@ -41,7 +41,8 @@ class SearchRecipes extends Component {
         </FormGroup>
         {'    '}
         <FormGroup>
-          <FormLabel>Dish</FormLabel>{' '}
+          <FormLabel>Dish</FormLabel>
+          {'  '}
           <FormControl
             type="text"
             placeholder="pizza"
