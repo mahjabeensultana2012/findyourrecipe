@@ -18,13 +18,19 @@ class SearchRecipes extends Component {
   search() {
     let { ingredients, dish } = this.state;
     const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
-    console.log('state', this.state, 'url', url);
+
+    fetch(url, {
+      method: 'GET',
+    })
+      .then(response => response.json())
+      .then(json => console.log('recipes', json));
   }
   render() {
     return (
       <Form inline>
         <FormGroup>
-          <FormLabel>Ingredients</FormLabel>{' '}
+          <FormLabel>Ingredients</FormLabel>
+          {'  '}
           <FormControl
             type="text"
             placeholder="mashroom"
@@ -33,7 +39,7 @@ class SearchRecipes extends Component {
             }
           />
         </FormGroup>
-        {'  '}
+        {'    '}
         <FormGroup>
           <FormLabel>Dish</FormLabel>{' '}
           <FormControl
@@ -42,7 +48,7 @@ class SearchRecipes extends Component {
             onChange={event => this.setState({ dish: event.target.value })}
           />
         </FormGroup>
-        {'  '}
+        {'   '}
         <Button onClick={() => this.search()}>Submit</Button>
       </Form>
     );
