@@ -16,8 +16,9 @@ class SearchRecipes extends Component {
     };
   }
   search() {
-    const url = 'http://www.recipepuppy.com/api/';
-    console.log('state', this.state);
+    let { ingredients, dish } = this.state;
+    const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
+    console.log('state', this.state, 'url', url);
   }
   render() {
     return (
