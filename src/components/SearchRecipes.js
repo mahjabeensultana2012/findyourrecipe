@@ -8,20 +8,41 @@ import {
 } from 'react-bootstrap';
 
 class SearchRecipes extends Component {
+  constructor() {
+    super();
+    this.state = {
+      ingredients: '',
+      dish: '',
+    };
+  }
+  search() {
+    const url = 'http://www.recipepuppy.com/api/';
+    console.log('state', this.state);
+  }
   render() {
     return (
       <Form inline>
         <FormGroup>
           <FormLabel>Ingredients</FormLabel>{' '}
-          <FormControl type="text" placeholder="mashroom" />
+          <FormControl
+            type="text"
+            placeholder="mashroom"
+            onChange={event =>
+              this.setState({ ingredients: event.target.value })
+            }
+          />
         </FormGroup>
         {'  '}
         <FormGroup>
           <FormLabel>Dish</FormLabel>{' '}
-          <FormControl type="text" placeholder="pizza" />
+          <FormControl
+            type="text"
+            placeholder="pizza"
+            onChange={event => this.setState({ dish: event.target.value })}
+          />
         </FormGroup>
         {'  '}
-        <Button>Submit</Button>
+        <Button onClick={() => this.search()}>Submit</Button>
       </Form>
     );
   }
