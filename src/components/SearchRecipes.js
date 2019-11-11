@@ -17,32 +17,21 @@ class SearchRecipes extends Component {
       dish: '',
     };
   }
-  // search() {
-  //   let { ingredients, dish } = this.state;
-  //   console.log('AAAA:', this.state);
-  //   console.log('BBB:', this.props);
-  //   const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
-
-  //   fetch(url, {
-  //     method: 'GET',
-  //   })
-  //     .then(response => response.json())
-  //     //.then(json => console.log('recipes', json));
-  //     .then(json => this.props.setRecipes(json));
-  // }
 
   search() {
     let { ingredients, dish } = this.state;
+    console.log('AAAA:', this.state);
+    console.log('BBB:', this.props);
     const url = `http://www.recipepuppy.com/api/?i=${ingredients}&q=${dish}`;
 
     fetch(url, {
       method: 'GET',
     })
       .then(response => response.json())
-      .then(json => {
-        this.props.setRecipes(json.results);
-      });
+      //.then(json => console.log('recipes', json));
+      .then(json => this.props.setRecipes(json.results));
   }
+
   render() {
     return (
       <Form inline>
