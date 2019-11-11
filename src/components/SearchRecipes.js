@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { setRecipes } from '../actions';
 import {
   Form,
   FormGroup,
@@ -56,4 +58,7 @@ class SearchRecipes extends Component {
   }
 }
 
-export default SearchRecipes;
+export default connect(
+  null,
+  setRecipes
+)(SearchRecipes);
