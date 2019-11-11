@@ -60,5 +60,5 @@ class SearchRecipes extends Component {
 
 export default connect(
   null,
-  setRecipes
+  { setRecipes }
 )(SearchRecipes);
