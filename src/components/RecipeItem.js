@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { favoriteRecipe } from '../actions';
 
 class ReactItem extends Component {
   render() {
@@ -19,4 +21,7 @@ class ReactItem extends Component {
   }
 }
 
-export default ReactItem;
+export default connect(
+  null,
+  favoriteRecipe
+)(ReactItem);
