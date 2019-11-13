@@ -3,9 +3,12 @@ import React, { Component } from 'react';
 class ReactItem extends Component {
   render() {
     console.log('AAA:', this.props);
+    let { recipe } = this.props;
     return (
       <div>
-        <h4>{this.props.recipe.title}</h4>
+        <a href={recipe.href}>
+          <h4>{recipe.title}</h4>
+        </a>
       </div>
     );
   }
