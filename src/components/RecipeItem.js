@@ -12,6 +12,7 @@ class ReactItem extends Component {
           </a>
           <p>{recipe.ingredients}</p>
         </div>
+
         <img src={recipe.thumbnail} alt={recipe.title} className="recipe-img" />
       </div>
     );
