@@ -8,6 +8,7 @@ class RecipeItem extends Component {
     let { recipe } = this.props;
     return (
       <div className="recipe-item">
+        <div onClick={() => this.props.favoriteRecipe(recipe)}>&#9734;</div>
         <div className="recipe-text">
           <a href={recipe.href}>
             <h4>{recipe.title}</h4>
