@@ -9,6 +9,7 @@ class ReactItem extends Component {
         <a href={recipe.href}>
           <h4>{recipe.title}</h4>
         </a>
+        <p>{recipe.ingredients}</p>
       </div>
     );
   }
