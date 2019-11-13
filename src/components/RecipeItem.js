@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { favoriteRecipe } from '../actions';
 
-class ReactItem extends Component {
+class RecipeItem extends Component {
   render() {
     console.log('AAA:', this.props);
     let { recipe } = this.props;
@@ -23,5 +23,5 @@ class ReactItem extends Component {
 
 export default connect(
   null,
-  favoriteRecipe
-)(ReactItem);
+  { favoriteRecipe }
+)(RecipeItem);
