@@ -3,7 +3,7 @@ body {
   padding: 5%;
 }
 
-.recipr-item {
+.recipe-item {
   display: flex;
   align-items: center;
   justify-content: center;
