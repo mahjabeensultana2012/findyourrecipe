@@ -7,9 +7,8 @@ class RecipeList extends Component {
     //console.log('this.props', this.props);
     return (
       <div>
-        {/* <h2>Recipe List</h2> */}
         {this.props.recipes.map((recipe, index) => {
-          return <RecipeItem key={index} recipe={recipe} />;
+          return <RecipeItem key={index} recipe={recipe} recipeButton={true} />;
         })}
       </div>
     );
