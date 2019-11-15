@@ -8,7 +8,7 @@ class RecipeList extends Component {
     //console.log('this.props', this.props);
     return (
       <div>
-        <h4>
+        <h4 className="link">
           <Link to="/favorites">Favorite List</Link>
         </h4>
         {this.props.recipes.map((recipe, index) => {

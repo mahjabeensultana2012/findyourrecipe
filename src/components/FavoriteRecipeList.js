@@ -7,7 +7,7 @@ class FavoriteRecipeList extends Component {
   render() {
     return (
       <div>
-        <h4>
+        <h4 className="link">
           <Link to="/">Home</Link>
         </h4>
         <h4>Favorite List</h4>
